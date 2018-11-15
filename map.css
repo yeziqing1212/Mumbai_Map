@@ -1,0 +1,144 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	position: fixed;
+    z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;	/* 60% of viewport width */
+	height: 100vh;	/* 100% of viewport height */
+}
+
+#layers {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.button-default {
+    background-color: #e48887;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-family: Courier;
+    cursor: pointer;
+    margin: 20px;
+    border: none;
+    font-size: 18px;
+    z-index: 3;
+}
+
+.button-default:hover {
+    background-color: #e04441;
+}
+
+#layers-control {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left:1px;
+    margin: 20px;
+    width: 180px;
+}
+
+#layers-control a {
+    font-size: 13px;
+    color: white;
+    display: block;
+    margin: 0 0 5px 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    background-color: #b3b3b373;
+}
+
+#layers-control a:last-child {
+    border: none;
+}
+
+#layers-control a:hover {
+    background-color: #f05c59;
+}
+
+#layers-control a.active {
+    background-color: #e48887;
+    color: #ffffff;
+}
+
+#layers-control a.active:hover {
+    background: #e04441;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+    /*background: rgba(0, 0, 0, 0.5);
+    filter: blur(0) brightness(1.1);*/
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*
+#menu {
+    transition: margin-left .5s;
+    padding: 16px;
+    z-index: 5;
+}*/
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.map-overlay {
+    position: absolute;
+    background:rgba(242, 170, 169, 0.74);
+   /* right:auto;*/
+    margin: 10px 10px ; 
+    font-family: Courier;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+    color: #ffffff;
+}
+
+#info-window {
+    right: 10px;
+    bottom: 30px;
+    width: 20vw;
+    height: 15vw;
+}
